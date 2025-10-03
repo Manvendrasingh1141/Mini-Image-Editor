@@ -16,4 +16,4 @@ Perfect for quick edits like applying filters, rotating, resizing, and downloadi
 ---
 
 ## 🔗 Live Demo  
-👉 [https://miniimageeditorapp.netlify.app](#)  
+👉 [https://miniimageeditorapp.netlify.app]  
