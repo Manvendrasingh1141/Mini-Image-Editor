@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #e7e9ff;
+  background-color: #0f1225;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: #0f1225;
+  box-shadow: 0px 2px 5px #24294d;
+  display: flex;
+  align-items: center;
+}
+.nav_div {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type=file]{display:none}
+
+.btn{
+  margin: 2vh 0vh;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  background: linear-gradient(lightblue, rgb(88, 170, 197));
+  transition: background 0.3s;
+  width: auto;              
+  align-self: flex-start; 
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  background: linear-gradient(lightblue, rgb(88, 170, 197));
+  transition: background 0.3s;
+  width: auto;              
+  align-self: flex-start;   
+}
+button:hover {
+  background: linear-gradient(rgb(88, 170, 197), lightblue);
+}
+
+.checkerboard{
+    background-image: linear-gradient(45deg, #555 25%, transparent 25%), 
+                        linear-gradient(-45deg, #555 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #555 75%), 
+                        linear-gradient(-45deg, transparent 75%, #555 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      border-radius:10px;
+      position:absolute;
+      inset:0;
+      z-index:0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: flex-start;  /* no stretching */
+}
+
+/* Main Layout */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
+  padding: 15px;
+}
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1b1f3a, #14172e);
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  position: relative;          /* parent must be relative */
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1b1f3a, #14172e);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden;            prevent checkerboard overflow */
+}
+
+
+.checkerboard {
+  background-image: 
+      linear-gradient(45deg, #555 25%, transparent 25%), 
+      linear-gradient(-45deg, #555 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #555 75%), 
+      linear-gradient(-45deg, transparent 75%, #555 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  border-radius: 10px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;                  /* stays behind content */
+}
+
+.card_data {
+  position: relative;           /* content sits above checkerboard */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#canvas{
+  position: relative;
+  z-index: 1;                 /* above checkerboard */
+  display: block;
+  margin: auto;               /* centers horizontally */
+  width: auto;
+  height: auto;
+  max-width: 100%;            /* shrink on smaller screens */
+  max-height: 100%;           /* keep inside parent card */
+  object-fit: contain;  
+}
+
+
+
+.status_bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #e7e9ff;
+  margin-top: -20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
