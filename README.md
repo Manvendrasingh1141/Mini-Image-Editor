@@ -15,8 +15,5 @@ Perfect for quick edits like applying filters, rotating, resizing, and downloadi
 
 ---
 
-## 🚀 Getting Started
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/mini-image-editor.git
-   cd mini-image-editor
+## 🔗 Live Demo  
+👉 [https://miniimageeditorapp.netlify.app/](#)  
