@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav_div">
+      <h1>🖼️ Image Editor</h1>
+        <label class="btn">
+    Upload Image
+    <input type="file" id="import_btn" accept="image/*">
+    
+  </label>
+    </div>
+  </nav>
+  <main>
+    <!-- Section-1  -->
+     <section class="card">
+      <div class="card_data">
+        <h1>🎨 Filters</h1>
+        <div class="data_items">
+          <label>Brightness</label><br>
+          <input type="range" min="0" max="200" value="100" id="brightness">
+        </div>
+        <div class="data_items">
+          <label>Contrast</label><br>
+          <input type="range" min="0" max="200" id="contrast" value="100">
+        </div>
+        <div class="data_items">
+          <label>Saturation</label><br>
+          <input type="range" min="0" max="200" id="saturation" value="100">
+        </div>
+        <div class="data_items">
+          <label>grayscale</label><br>
+          <input type="range" min="0" max="100" id="grayscale" value="0">
+        </div>
+        <div class="buttons">
+          <button id="undo">Undo</button>
+          <button id="reset">Reset</button>
+          <button id="download">Download</button>
+        </div>
+      </div>
+     </section>
+
+     <!-- Section-2  -->
+      <section class="card">
+        <div id="w" class="checkerboard"></div>
+        <!-- <img id="preview" style="display: none;"> -->
+        <canvas id="canvas"></canvas>
+      </section>
+
+     <!-- Section-3  -->
+      <section class="card">
+        <div class="card_data">
+          <h1>✂️ Crop</h1>
+          <div class="buttons">
+            <button class="btn" id="startCrop">Start Crop</button>
+            <button class="btn" id="applyCrop">Apply</button>
+          </div>
+          <!-- <h3>Status</h3>
+          <div class="status_bar"></div>
+          <div id="status"></div> -->
+        </div>
+      </section>      
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
